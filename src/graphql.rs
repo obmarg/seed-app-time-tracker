@@ -108,14 +108,14 @@ pub mod mutations {
             #[arguments(input = UpdateClientInput {
                 filter: ClientFilter {
                     id: Some(StringHashFilter {
-                        eq: Some(args.id),
+                        eq: Some(args.id.clone()),
                     }),
                     and: None,
                     not: None,
                     or: None,
                 },
                 set: Some(ClientPatch {
-                    name: Some(args.name),
+                    name: Some(args.name.clone()),
                     projects: None,
                     time_blocks: None,
                     user: None,
